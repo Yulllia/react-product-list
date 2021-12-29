@@ -1,0 +1,31 @@
+.container {
+    max-width:800px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid rgb(21, 39, 53);
+    padding: 30px;
+    border-radius: 5px;
+  }
+.header{
+    justify-content: space-between;
+        margin-bottom: 10px;
+}
+.heading {
+ display: flex;
+ padding-top: 20px;
+}
+.img{
+  width:200px;
+}
+.image,
+.quantity,
+.description
+{
+  max-width: 300px;
+  padding:0 40px;
+}
+.product_name{
+  max-width: 300px;
+  padding-left:86px;
+}
