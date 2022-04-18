@@ -1,23 +1,35 @@
-import NewProductItemDetail from "./NewProductItemDetail.js";
+import ProductItemDetail from "./ProductItemDetail.js";
+import ProductItemComments from "./ProductItemComments.js";
+import { useParams } from "react-router-dom";
+import "./DetailedProductList.css";
 
 function DetailedProductList({ products, setProducts }) {
+  const { id } = useParams();
+  const product = products.find((el) => el.id === id);
+
+  function deleteComments(id) {
+    product?.comments.splice(id, 1);
+    setProducts([...products]);
+  }
+
   return (
     <div>
       <h1>Details Pages</h1>
-      <div className="heading">
-        <div className="image">Image</div>
-        <div className="description">Description</div>
-        <div className="description">Count</div>
-        <div className="quantity">Width</div>
-        <div className="quantity">Height</div>
-        <div className="quantity">Weight</div>
-      </div>
-      {products.map((item, index) => (
-        <NewProductItemDetail
+      <ProductItemDetail
+        className="productname"
+        id={id}
+        key={products.id}
+        product={product}
+        products={products}
+        setProducts={setProducts}
+      />
+      {product?.comments.map((comment, index) => (
+        <ProductItemComments
           className="productname"
           id={index}
           key={index}
-          product={item}
+          comment={comment}
+          onDelete={deleteComments}
         />
       ))}
     </div>
