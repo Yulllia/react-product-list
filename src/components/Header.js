@@ -6,22 +6,16 @@ import Button from "./Button";
 function Header({ title, products, setProducts }) {
   const [showAddProductItem, setShowAddProductItem] = useState(false);
   const onClick = () => {
-    console.log("onclick");
+    setShowAddProductItem(true);
   };
 
   return (
     <header className="header">
       <h1>
         {title}
-        <Button
-          onClick={onClick}
-          color="orange"
-          text="Add New Product"
-          onClick={() => {
-            setShowAddProductItem(true);
-          }}
-        />
+        <Button onClick={onClick} color="orange" text="Add New Product" />
         <AddProductItem
+          isEdit={false}
           showAddProductItem={showAddProductItem}
           setShowAddProductItem={setShowAddProductItem}
           products={products}

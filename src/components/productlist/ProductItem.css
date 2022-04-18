@@ -41,10 +41,11 @@
   align-items: center;
   justify-content: space-between;
 }
-img {
+.product-image {
   width: 179px;
   height: 100px;
 }
+
 .add-items {
   display: flex;
   justify-content: space-evenly;

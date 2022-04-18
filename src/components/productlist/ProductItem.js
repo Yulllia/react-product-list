@@ -1,11 +1,9 @@
 import { FaTimes } from "react-icons/fa";
 import Modal from "../Modal.js";
-import AddProductItem from "../AddProductItem.js";
+import "./ProductItem.css";
 import "../Modal.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import DetailedProductList from "./components/productlist/DetailedProductList.js";
-// import "./components/productlist/DetailedProductList.css";
 
 function ProductItem({ product, onDelete, id }) {
   const [modalActive, setModalActive] = useState(false);
@@ -30,7 +28,7 @@ function ProductItem({ product, onDelete, id }) {
       ></Modal>
 
       <div className="details">
-        <Link to="/details/id">Details</Link>
+        <Link to={`/details/${id}`}>Details</Link>
       </div>
     </div>
   );
@@ -39,7 +37,7 @@ export default ProductItem;
 const ImageComponent = ({ url }) => {
   return (
     <div>
-      <img src={url} alt="pic" />
+      <img className="product-image" src={url} alt="pic" />
     </div>
   );
 };

@@ -1,21 +1,22 @@
 import ProductItem from "./ProductItem.js";
-// import { FaAngleDoubleUp } from 'react-icons/fa'
 import { useState } from "react";
+
 function ProductList({ products, setProducts }) {
   const [quantity, setQuantity] = useState(true);
   console.log(products);
   function changeSort() {
     let arr = products.sort((a, b) => {
-      console.log(quantity);
+      console.log(a.count - b.count);
       return quantity ? a.count - b.count : b.count - a.count;
     });
     setProducts([...arr]);
-    console.log(products);
+    console.log(!quantity);
     setQuantity(!quantity);
   }
-  function deleteItem(id) {
-    products.splice(id, 1);
-    setProducts([...products]);
+  async function deleteItem(id) {
+    const response = await fetch(`/products/${id}`, { method: "DELETE" });
+    const data = await response.json();
+    setProducts(products.filter((item) => item.id !== id));
     console.log(id);
   }
 
@@ -69,9 +70,10 @@ function ProductList({ products, setProducts }) {
       {products.map((product, index) => (
         <ProductItem
           className="productname"
-          id={index}
+          id={product.id}
           key={index}
           product={product}
+          isEdit={false}
           onDelete={deleteItem}
         />
       ))}

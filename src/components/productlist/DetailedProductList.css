@@ -1,0 +1,78 @@
+.text-description {
+  padding: 30px 40px;
+  width: 300px;
+}
+.product-description {
+  margin-top: 20px;
+  width: 80%;
+}
+.comments-description {
+  width: 400px;
+  line-break: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.head-description {
+  display: flex;
+  justify-content: space-between;
+}
+.product-details {
+  display: block;
+}
+.block-content {
+  display: flex;
+}
+.block {
+  display: flex;
+  padding: 20px;
+}
+.text-block {
+  margin-right: 7%;
+  background-color: lightgreen;
+}
+.comments {
+  font-size: 15px;
+  color: black;
+  padding: 20px;
+}
+.add-comment {
+  padding: 15px;
+  width: 200px;
+  border: 1px solid black;
+  background-color: rgb(37, 124, 86);
+  text-align: center;
+  cursor: pointer;
+  color: black;
+}
+.delete-comments {
+  margin-left: 61%;
+}
+.image-block {
+  padding: 30px 40px;
+  width: 300px;
+}
+
+.image-content {
+  width: 87%;
+  height: 100%;
+}
+.image-detail {
+  width: 100%;
+  height: 80%;
+  margin-top: 30px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.edit {
+  padding: 15px;
+  width: 200px;
+  margin-right: 5%;
+  border: 1px solid black;
+  background-color: rgb(37, 108, 124);
+  color: blue;
+  font-size: 23px;
+  cursor: pointer;
+  text-align: center;
+}

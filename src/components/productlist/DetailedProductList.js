@@ -6,7 +6,7 @@ import "./DetailedProductList.css";
 function DetailedProductList({ products, setProducts }) {
   const { id } = useParams();
   const product = products.find((el) => el.id === id);
-
+  console.log(product);
   function deleteComments(id) {
     product?.comments.splice(id, 1);
     setProducts([...products]);

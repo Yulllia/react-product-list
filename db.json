@@ -1,0 +1,17 @@
+{
+  "products": [
+    {
+      "imageUrl": "https://www.eatthis.com/wp-content/uploads/sites/4/2019/09/avocado-halves.jpg?quality=82&strip=1&resize=640%2C360",
+      "name": "Avocado",
+      "count": "23",
+      "description": "Avocados grow on trees in warmer climates and are native to Mexico",
+      "size": {
+        "width": 300,
+        "height": 300
+      },
+      "weight": "200g",
+      "id": 0,
+      "comments": []
+    }
+  ]
+}

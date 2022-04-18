@@ -1,6 +1,6 @@
 import React from "react";
 import "../components/Modal.css";
-const Modal = ({ active, setActive, id, onDelete }) => {
+const Modal = ({ active, setActive, onDelete, id }) => {
   return (
     <div
       className={active ? "modal active" : "modal"}
